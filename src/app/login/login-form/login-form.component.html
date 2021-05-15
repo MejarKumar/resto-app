@@ -1,17 +1,27 @@
-<p>login-form works!</p>
-<form action="">
-  
-  <mat-form-field appearance="fill" class="form-control">
-    <mat-label>Email</mat-label>
-    <input type="email" matInput>
-  </mat-form-field>
- 
-  <mat-form-field appearance="fill" class="form-control">
-    <mat-label>Password</mat-label>
-    <input type="password" matInput>
-  </mat-form-field>
-  <button mat-raised-button>LOGIN</button>
- <a routerLink="/register">Create a user</a>
-</form>
-
-<router-outlet></router-outlet>
+<div fxLayoutAlign="center center" fxFlexFill class="main-register-div">
+  <mat-card fxFlex="33">
+      <mat-icon></mat-icon>
+          <mat-toolbar color="primary">
+            <span>LOGIN PAGE</span>
+          </mat-toolbar>
+        <br>
+      <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="loginform">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email" placeholder="Email" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password"  placeholder="Password" required>
+      </mat-form-field>
+      <button type="submit" mat-raised-button (click)="onLogin()">LOGIN</button>
+      <br>
+    
+      <h2 class="ortext">OR</h2>
+      <a routerLink="/register">Create a User</a>
+      <!-- <mat-divider>OR</mat-divider>
+      <p>if you have already account</p>
+      <button mat-raised-button color="green">LOGIN</button> -->
+  </form>
+  </mat-card>
+  </div>

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "resto-aaf7d"
+  },
+  "targets": {
+    "resto-aaf7d": {
+      "hosting": {
+        "restro": [
+          "resto-aaf7d"
+        ]
+      }
+    }
+  }
+}

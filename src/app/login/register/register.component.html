@@ -1,18 +1,24 @@
 <div fxLayoutAlign="center center" fxFlexFill class="main-register-div">
 <mat-card fxFlex="33">
-    <mat-icon>account</mat-icon>
+    <mat-icon></mat-icon>
         <mat-toolbar color="primary">
           <span>REGISTER YOURSELF</span>
         </mat-toolbar>
-      
-    <form fxLayoutAlign="stretch" fxLayout="column">
-    <mat-form-field appearance="fill">
-        <input matInput type="email" placeholder="Email" required>
+      <br>
+    <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="registerform">
+    <mat-form-field appearance="fill" >
+      <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" placeholder="Email" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
-        <input matInput type="password" placeholder="Password" required>
+      <mat-label>Password </mat-label>
+        <input matInput type="password" formControlName="password" placeholder="Password" required>
     </mat-form-field>
-    <button type="submit" mat-raised-button>SIGNUP</button>
+    <button type="submit" (click)=" createUser()" mat-raised-button>SIGNUP</button>
+    <br>
+    
+    <h2 class="ortext">OR</h2>
+    <a routerLink="/login">Go to Login Page</a>
     <!-- <mat-divider>OR</mat-divider>
     <p>if you have already account</p>
     <button mat-raised-button color="green">LOGIN</button> -->

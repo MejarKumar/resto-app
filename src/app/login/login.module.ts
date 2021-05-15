@@ -12,7 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import {ReactiveFormsModule} from '@angular/forms'
  @NgModule({
   declarations: [
     LoginFormComponent,
@@ -31,6 +31,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatCardModule,
     FlexLayoutModule,
     MatToolbarModule,
+    ReactiveFormsModule,
+    
     
   ],
   exports: [

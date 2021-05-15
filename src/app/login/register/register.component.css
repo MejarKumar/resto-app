@@ -1,3 +1,9 @@
+/* :host{
+    background: crimson;
+} */
 .main-register-div{
 margin-top: 15vh;
+}
+.ortext{
+text-align: center;
 }

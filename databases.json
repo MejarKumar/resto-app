@@ -1,0 +1,46 @@
+{
+  "restaurant": [
+    {
+      "name": "KFC",
+      "address": "Goa",
+      "email": "kfc@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "MC DONALD",
+      "address": "Kolkata",
+      "email": "mcdonald@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "HALDIRAM",
+      "address": "Mumbai",
+      "email": "haldiram@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "SPF",
+      "address": "Saharsa",
+      "email": "spf@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "MAURYA HOTEL",
+      "address": "Patna",
+      "email": "maurya@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "SAMRAT ",
+      "address": "Bhagalpur",
+      "email": "samrat@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "MAHARAJA",
+      "address": "Gujarat",
+      "email": "maharaja@gmail.com",
+      "id": 7
+    }
+  ]
+}

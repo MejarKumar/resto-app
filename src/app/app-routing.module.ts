@@ -6,7 +6,9 @@ import {RegisterComponent} from './login/register/register.component';
 import {UpdateRestroComponent} from './update-restro/update-restro.component';
 import {AddRestroComponent} from './add-restro/add-restro.component';
 import {HomeComponent} from './dashboard/home/home.component';
+import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
+const redirectLoggedInToItems = () => redirectUnauthorizedTo(['login']);
 const routes: Routes = [
  
   {
@@ -15,23 +17,31 @@ const routes: Routes = [
   },
  {
  component:LoginFormComponent,
-    path:'login'
+    path:'login',
+    // canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectLoggedInToItems }
   },
   {
     component:UpdateRestroComponent,
-    path:'update/:id'
+    path:'update/:id',
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectLoggedInToItems }
   },
   {
     component:AddRestroComponent,
-    path:'add'
+    path:'add',
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectLoggedInToItems }
+    
   },
   {
     component:ListRestroComponent,
-    path:'list'
+    path:'list',
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectLoggedInToItems }
   },
   {
     component: HomeComponent,
-    path:''
+    path:'home'
    },
   
 ];
